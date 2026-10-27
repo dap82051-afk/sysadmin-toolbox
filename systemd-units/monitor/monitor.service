@@ -1,0 +1,13 @@
+[Unit]
+Description=Disk Monitor Service
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/sysadmin-toolbox/scripts/monitor.sh
+User=root
+StandardOutput=journal
+StandardError=journal
+ProtectSystem=full
+ProtectHome=yes
+NoNewPrivileges=yes
